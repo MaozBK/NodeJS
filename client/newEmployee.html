@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Employee</title>
+    <!-- Add your CSS styles here -->
+  </head>
+  <body>
+    <h1>New Employee</h1>
+    <form action="/employees" method="POST">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required /><br />
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required /><br />
+
+      <label for="startWorkYear">Start Work Year:</label>
+      <input
+        type="number"
+        id="startWorkYear"
+        name="startWorkYear"
+        required
+      /><br />
+
+      <label for="department">Department:</label>
+      <select id="department" name="departmentID">
+        <!-- Populate department options dynamically (if needed) --></select
+      ><br />
+
+      <button type="submit">Save</button>
+      <button type="button" onclick="cancel()">Cancel</button>
+    </form>
+
+    <script>
+      // JavaScript function for canceling the form
+      function cancel() {
+        window.location.href = "/employees";
+      }
+    </script>
+  </body>
+</html>

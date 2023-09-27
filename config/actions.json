@@ -1,0 +1,9 @@
+{
+  "actions": [
+    { "id": 1, "maxAxtions": 5, "date": "1/03/2022", "actionsAllowd": 3 },
+    { "id": 1, "maxAxtions": 5, "date": "1/03/2022", "actionsAllowd": 2 },
+    { "id": 1, "maxAxtions": 5, "date": "2/03/2022", "actionsAllowd": 4 },
+    { "id": 2, "maxAxtions": 7, "date": "2/03/2022", "actionsAllowd": 6 },
+    { "id": 2, "maxAxtions": 7, "date": "2/03/2022", "actionsAllowd": 5 }
+  ]
+}

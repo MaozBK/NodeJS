@@ -1,0 +1,21 @@
+<html>
+  <body onload="getProducts()">
+    <h1>Products Page</h1>
+
+    <script>
+      const url = "http://localhost:3000/employees";
+
+      const getProducts = async () => {
+        const accessToken = sessionStorage["accessToken"];
+
+        const resp = await fetch(url, {
+          method: "GET",
+          headers: { "x-access-token": accessToken },
+        });
+
+        const data = await resp.json();
+        console.log(data);
+      };
+    </script>
+  </body>
+</html>
