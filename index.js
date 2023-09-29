@@ -11,11 +11,11 @@ const shiftsRouter = require("./routers/shiftsRouter");
 const usersRouter = require("./routers/usersRouter");
 
 //connected to projectDB in Mongo
+connectDB();
 
 const app = express();
 const PORT = 3000;
 
-connectDB();
 app.use(cors());
 app.use(express.json());
 
