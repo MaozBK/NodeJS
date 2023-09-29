@@ -2,13 +2,17 @@ const express = require('express');
 const departmentsBLL = require('../BLL/departmentsBLL');
 
 // Entry point: http://localhost:3000/departments
+/*
+Because all the mongoDB ion BLL are returning a promise, we need to asyncronously get the data from the database.
+that's why I used async-await
+*/
 
 const router = express.Router();
 
 router.get('/', async (req, res) => {
     try {
         const departments = await departmentsBLL.getAllDepartments();
-        res.send(departments);
+        res.send(departments); //'send' vs 'json' response: json know how to deal with 'NULL' or 'undefined' and 'send' can't
     } catch (error) {
         res.status(500).send(error);
     }

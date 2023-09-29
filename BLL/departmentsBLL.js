@@ -5,23 +5,23 @@ const Department = require('../models/departmentModel');
 
 //GET -  Get All - Read
 const getAllDepartments = () => {
-    return Department.find({})
+    return Department.find({}) // will bring all documents from db 
 };
 
 //Get - Get Department by ID - Read
 const getDepartmentById = (id) => {
-    return Department.findById({ _id: id })
+    return Department.findById({ _id: id }) // '_id' is how the id prop look like in mongodb when automatically generated
 };
 
 // POST - Create 
 const addDepartment = async (obj) => {
-    const per = new Department(obj)
-    await per.save()
+    const department = new Department(obj)
+    await department.save()
     return "Created! "
 };
 //PUT - Update
 const updateDepartment = async (id, obj) => {
-    await Department.findByIdAndUpdate(id, obj)
+    await Department.findByIdAndUpdate(id, obj) // (id I'm searching & object I want to update )
     return "Departments Updated!"
 };
 
