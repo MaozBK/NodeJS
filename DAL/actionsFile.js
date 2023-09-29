@@ -1,16 +1,15 @@
-const jf = require('jsonfile');
+const jf = require("jsonfile");
 
-const file = 'config/actions.json';
+const file = "config/actions.json";
 
-//reading from file 
+//reading from file
 const getActions = () => {
-    return jf.readFile(file)
-}
-
+  return jf.readFile(file);
+};
 
 //writing to file
 const increaseActionsNumber = (data) => {
-    return jf.writeFile(file, data);
-}
+  return jf.writeFile(file, data);
+};
 
-module.exports = { getActions, increaseActionsNumber }
+module.exports = { getActions, increaseActionsNumber };
