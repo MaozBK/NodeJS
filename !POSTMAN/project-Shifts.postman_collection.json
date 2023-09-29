@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "890e3c25-3012-4129-b6e3-3262399e8453",
+		"name": "project-Shifts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18918993"
+	},
+	"item": [
+		{
+			"name": "Get All Shifts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Shift By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/persons/64f5fcc058d6c949d0cfbdc0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"persons",
+						"64f5fcc058d6c949d0cfbdc0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Shift",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John\",\r\n    \"age\": \"99\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/persons/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"persons",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Shift",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"_id\": 5,\r\n        \"name\": \"Johnny sara\",\r\n        \"age\": 150\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/persons/64f5ff45a4c3768f220bf971",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"persons",
+						"64f5ff45a4c3768f220bf971"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Shift By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/persons/64f5fd72dd9d041d41c8ae4c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"persons",
+						"64f5fd72dd9d041d41c8ae4c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
